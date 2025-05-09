@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  jf-spring:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jfspring
+    image: com.jf.exemplo/jf-spring:latest
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    # reinicia automaticamente em caso de falha
+    restart: unless-stopped
