@@ -11,5 +11,4 @@ services:
       - "8080:8081"
     environment:
       SPRING_PROFILES_ACTIVE: docker
-    # reinicia automaticamente em caso de falha
     restart: unless-stopped
